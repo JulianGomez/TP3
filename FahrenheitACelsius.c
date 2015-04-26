@@ -1,6 +1,11 @@
+/*Imprime la tabla de Fahreinhet a Celsius
+ * Gomez Julian Ariel 153.605-9
+ * 20150426
+*/
+
+
 #include <stdio.h>
 
-/*Imprime la tabla de Fahreinhet a Celsius*/
 
 float GetCelsius(int fahr)
 {
@@ -8,11 +13,13 @@ float GetCelsius(int fahr)
  return fahr; 	
 }
 
-main()
+main(void)
 {
-	 int fahr=0;
+	int fahr=0;
+	const int maximo=300;
+	const int incremento=20;
 	
-	for (fahr; fahr<=300; fahr=fahr+20)
+	for (fahr; fahr<=maximo; fahr=fahr+incremento)
 		printf("%3d%7.1f\n", fahr, GetCelsius(fahr));
 	
 }
