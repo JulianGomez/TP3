@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 
-float GetCelsius(int fahr)
+double GetCelsius(double fahr)
 {
  fahr = (5.0/9.0)*(fahr-32);
  return fahr; 	
@@ -20,7 +20,7 @@ main(void)
 	const int incremento=20;
 	
 	for (fahr; fahr<=maximo; fahr=fahr+incremento)
-		printf("%3d%7.1f\n", fahr, GetCelsius(fahr));
+		printf("%3d%7.2f\n", fahr, GetCelsius(fahr));
 	
 }
 
